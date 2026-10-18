@@ -1,6 +1,7 @@
-import type { Project } from "@/types/project";
+import type { ProjectInput } from "@/types/project";
+import { normalizeProjects } from "@/lib/projects";
 // Sample case studies and suggested stacks. Replace with verified project details.
-export const projects: Project[] = [
+const projectData: ProjectInput[] = [
   {
     slug: "discord-lms", title: "Discord LMS",
     shortDescription: "Bringing structured learning to the place students already connect.",
@@ -58,4 +59,5 @@ export const projects: Project[] = [
     results: "Intended to support independent learning and technical confidence. Add published content and learner feedback here.",
   },
 ];
-export function getProject(slug: string) { return projects.find((project) => project.slug === slug); }
+export const projects = normalizeProjects(projectData);
+export function getProject(slug: string | undefined) { return projects.find((project) => project.slug === slug); }

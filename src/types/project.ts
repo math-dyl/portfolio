@@ -8,7 +8,7 @@ export interface Project {
   description: string;
   categories: ProjectCategory[];
   technologies: string[];
-  coverImage: ProjectImage;
+  coverImage?: ProjectImage;
   images?: ProjectImage[];
   featured?: boolean;
   githubUrl?: string;
@@ -20,3 +20,5 @@ export interface Project {
   results?: string;
   sample?: boolean;
 }
+// Authoring may omit presentation fields; the catalog supplies safe defaults.
+export type ProjectInput = Pick<Project, "slug" | "title"> & Partial<Omit<Project, "slug" | "title">>;

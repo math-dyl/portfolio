@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="650" viewBox="0 0 1000 650">
+  <rect width="1000" height="650" fill="#101010"/>
+  <rect x="32" y="32" width="936" height="586" rx="16" fill="none" stroke="#303030"/>
+  <path d="M440 295h120m-60-60v120" stroke="#737373" stroke-width="2"/>
+  <text x="500" y="420" text-anchor="middle" fill="#a3a3a3" font-family="Arial,Helvetica,sans-serif" font-size="20">Project preview unavailable</text>
+</svg>
